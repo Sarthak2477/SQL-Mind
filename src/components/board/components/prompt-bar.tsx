@@ -12,7 +12,6 @@ import { generateSchemaFromPrompt } from "@/actions/schema-generator";
 import useInspectorStore from '@/stores/inspector';
 import useFlowStore from '@/stores/flow';
 import useLoaderStore, { ENUM__LOADER_TO_MAIN_CODE } from '@/stores/loader';
-import { generateDocumentationFromSchema } from '@/actions/documentation-generator';
 import SQLToReactFlowParser from '@/lib/react-flow-parser';
 import { sleep } from '@/lib/utils';
 
@@ -98,7 +97,7 @@ export default function PromptBar({}: Props) {
     className='
       absolute 
       w-[32rem] min-h-14 
-      top-4 left-1/2 -translate-x-1/2 
+      bottom-4 left-1/2 -translate-x-1/2 
       bg-zinc-900 
       rounded-xl
       m-[20px]

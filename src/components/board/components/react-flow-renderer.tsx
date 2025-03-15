@@ -123,13 +123,11 @@ export default function NodeRenderer({
         }}
         nodesDraggable
       >
-        {
-          !edges.length && !nodes.length && (
-            <div className='absolute h-full w-full pointer-events-none flex items-center justify-center'>
-          <Image src="/cohesion.png" alt="Company logo" height={1000} width={1000} className='opacity-[0.02] grayscale' />
+        {!edges.length && !nodes.length && (
+          <div className="absolute h-full w-full flex items-center justify-center text-gray-500 text-4xl font-mono font-bold">
+            Ask, Query, Analyze – Instantly.
           </div>
-          )
-        }
+        )}
         <Background color='#fff2' bgColor='var(--board-default-background)' size={2} gap={20} />
         <Controls position='bottom-left' className='-translate-y-8'/>
       </ReactFlow>
@@ -156,33 +154,7 @@ export default function NodeRenderer({
         <div className='border-e-2 border-gray-500'></div>
         <div className={`flex gap-2 ${mainSchemaText.length > 0 ? "opacity-1 -translate-y-0" : "opacity-0 -translate-y-5"} transition-all`}>
 
-          {/* <ExportButton 
-            onClick={() => {
-              setEditorOpen(true);
-              setCurrentTab(TABS__EXPORT);
-              setExportOption("django");
-            }}
-            imageUrl='/django_logo.jpg'
-            />
-          <ExportButton 
-            onClick={() => {
-              setEditorOpen(true);
-              setCurrentTab(TABS__EXPORT);
-              setExportOption("prisma");
-            }}
-            className='bg-white p-1'
-            imageUrl='/prisma_logo.svg'
-          />
-          <ExportButton 
-            comingSoon
-            className='bg-white p-1'
-            imageUrl='/drizzle_logo.svg'
-          />
-          <ExportButton 
-            comingSoon
-            className='bg-white p-1'
-            imageUrl='/laravel_logo.svg'
-          /> */}
+         
         </div>
       </div>
     </>

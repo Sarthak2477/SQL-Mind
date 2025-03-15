@@ -7,6 +7,7 @@ import useInspectorStore from '@/stores/inspector';
 import useLoaderStore, { LOADER_TO_MAIN_CODE } from '@/stores/loader';
 import { MultiStepLoader } from '../ui/multi-step-loader';
 import useFlowStore from '@/stores/flow';
+import Snackbar from '../ui/snackbar';
 
 type Props = {}
 
@@ -166,7 +167,8 @@ export default function SchemaBoard({}: Props) {
   const { flowNodes, flowEdges } = useFlowStore();
   
   return (
-    <div className='flex-1 relative flex'>
+    <div className='flex-1 relative flex max-w-[100vw] max-h-[100vh]'>
+      <Snackbar/>
       <div className={`flex-[3] relative transition-all`}>
         {buffering ? <MultiStepLoader value={mainCodeLoadingStep} loading={buffering} loadingStates={LOADER_TO_MAIN_CODE} /> : null}
         <NodeRenderer 
@@ -174,7 +176,7 @@ export default function SchemaBoard({}: Props) {
           edges={flowEdges}
         />        
       </div>
-      <div className='m-3'>
+      <div className=''>
       <PromptBar />
       </div>
 

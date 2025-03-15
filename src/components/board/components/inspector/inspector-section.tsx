@@ -74,18 +74,12 @@ export default function CodeEditorSection({}: Props) {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <div className="grid grid-cols-2 gap-2 p-2">
+          <div className="p-6">
             <Button 
               className='w-full py-2 bg-white hover:bg-white-400 text-black transition duration-200'
               onClick={() => handleConnectClick('trino')}
             >
               Connect Trino
-            </Button>
-            <Button
-              className='w-full py-2 bg-white hover:bg-white-400 text-black transition duration-200'
-              onClick={() => handleConnectClick('spark')}
-            >
-              Connect Spark
             </Button>
           </div>
           

@@ -33,7 +33,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <ClerkProvider>
       <html lang="en">
         <Head>
           <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
@@ -44,6 +43,5 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    // </ClerkProvider>
   );
 }

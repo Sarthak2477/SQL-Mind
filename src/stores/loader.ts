@@ -20,9 +20,6 @@ export const LOADER_TO_MAIN_CODE: LoadingState[] = [
     text: "Generating flow diagram for the solution",
   },
   {
-    text: "Generating documentation",
-  },
-  {
     text: "Complete",
   },
 ];
