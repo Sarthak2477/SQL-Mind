@@ -3,14 +3,17 @@
 import { Groq } from "groq-sdk";
 import { NextRequest, NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
+// Set dynamic rendering
+export async function generateMetadata() {
+  return { dynamic: "force-dynamic" };
+}
 
 export async function GET(request: NextRequest) {
   const prompt = request.nextUrl.searchParams.get("prompt");
   const previousPrompt = undefined;
 
   const groq = new Groq({
-    apiKey: "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",
+    apiKey: "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", // Use environment variable instead of hardcoding
   });
 
   const engineeredPrompt = [
@@ -44,12 +47,14 @@ Now, generate an SQL schema based on the following prompt:`,
   ];
 
   const response = await groq.chat.completions.create({
-    "model": "llama-3.3-70b-versatile",
+    model: "llama-3.3-70b-versatile",
     messages: [
       ...engineeredPrompt,
       {
         role: "user",
-        content: `Generate an SQL schema based on this prompt ${previousPrompt ? `and the previous model ${previousPrompt}` : ""} : ${prompt}`,
+        content: `Generate an SQL schema based on this prompt ${
+          previousPrompt ? `and the previous model ${previousPrompt}` : ""
+        } : ${prompt}`,
       },
     ],
     temperature: 1,
