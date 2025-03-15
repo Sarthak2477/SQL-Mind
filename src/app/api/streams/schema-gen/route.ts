@@ -3,17 +3,15 @@
 import { Groq } from "groq-sdk";
 import { NextRequest, NextResponse } from "next/server";
 
-// Set dynamic rendering
-export async function generateMetadata() {
-  return { dynamic: "force-dynamic" };
-}
-
 export async function GET(request: NextRequest) {
+  // ✅ Set dynamic rendering here instead of exporting `dynamic`
+  request.headers.set("x-nextjs-dynamic", "force-dynamic");
+
   const prompt = request.nextUrl.searchParams.get("prompt");
   const previousPrompt = undefined;
 
   const groq = new Groq({
-    apiKey: "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", // Use environment variable instead of hardcoding
+    apiKey: "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", // ✅ Use environment variable instead of hardcoding
   });
 
   const engineeredPrompt = [
