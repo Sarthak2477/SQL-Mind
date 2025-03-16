@@ -59,16 +59,6 @@ Ensure you have the following tools installed:
 - **Export to ORM**: Choose your ORM (Django/Prisma), and SQL-Mind will generate the appropriate code for you.
 - **Entity-Relationship Diagram**: Upload your ERD, and SQL-Mind will automatically generate SQL queries based on your diagram.
 
-## Contributing
-
-We welcome contributions to improve SQL-Mind. If you'd like to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature-name`).
-6. Open a pull request.
 
 ## Acknowledgements
 
