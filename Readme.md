@@ -67,7 +67,7 @@ Ensure you have the following tools installed:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 
-##Screenshots
+## Screenshots
 
 ![image](https://github.com/user-attachments/assets/724e7616-7e16-4cf2-8a62-e67796570428)
 ![image](https://github.com/user-attachments/assets/63b73914-20fb-4a04-afb4-27fc05428958)
